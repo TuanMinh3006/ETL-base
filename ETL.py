@@ -9,8 +9,8 @@ import glob
 import xml.etree.ElementTree as ET
 from datetime import datetime
 
-target_file=r"D:\Python\Bai_Tap_Crouse\ETL base\transformed_data.csv"
-log_file=r"D:\Python\Bai_Tap_Crouse\ETL base\log_file.txt"
+target_file=r"D:\Python\ETL base\transformed_data.csv"
+log_file=r"D:\Python\ETL base\log_file.txt"
 
 def extract_from_csv(file_csv):
     dataframe = pd.read_csv(file_csv)
@@ -34,13 +34,13 @@ def extract_from_xml(file_xml):
 def extract():
     extracted_data=pd.DataFrame(columns=["car_model",'year_of_manufacture','price','fuel'])
     
-    for csv_file in glob.glob("D:\Python\Bai_Tap_Crouse\ETL base\datasource\*.csv"):
+    for csv_file in glob.glob("D:\Python\ETL base\datasource\*.csv"):
         extracted_data=pd.concat([extracted_data,pd.DataFrame(extract_from_csv(csv_file))],ignore_index=True)
     
-    for json_file in glob.glob("D:\Python\Bai_Tap_Crouse\ETL base\datasource\*.json"):
+    for json_file in glob.glob("D:\Python\ETL base\datasource\*.json"):
         extracted_data=pd.concat([extracted_data,pd.DataFrame(extract_from_json(json_file))],ignore_index=True)
     
-    for xml_file in glob.glob("D:\Python\Bai_Tap_Crouse\ETL base\datasource\*.xml"):
+    for xml_file in glob.glob("D:\Python\ETL base\datasource\*.xml"):
         extracted_data=pd.concat([extracted_data,pd.DataFrame(extract_from_xml(xml_file))],ignore_index=True)
         
     return extracted_data
