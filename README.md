@@ -38,8 +38,6 @@ Output: File .CSV có tên transformed_data.csv lưu các thông tin đã đư�
 ## Phần 4: Log
 Mục đích: Ghi lại các quá trình ETL nhằm quản lý thời gian và có thể nhận biết lỗi nếu xảy ra
 
-Thư viện sử dụng: datetime
-
 OutPut:
 
 ![image](https://github.com/user-attachments/assets/b9f1f8e5-6db4-453b-bdc3-b46ba9f15bb1)
