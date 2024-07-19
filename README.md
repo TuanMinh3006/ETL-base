@@ -41,5 +41,6 @@ Mục đích: Ghi lại các quá trình ETL nhằm quản lý thời gian và c
 Thư viện sử dụng: datetime
 
 OutPut:
+
 ![image](https://github.com/user-attachments/assets/b9f1f8e5-6db4-453b-bdc3-b46ba9f15bb1)
 
